@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "8OtNIuFSUG/lfhnqmttgGcNNY4mj4clqvtExSufzK5w=",
+  "Source": "TP_InterfaceWeb",
+  "BasePath": "_content/TP_InterfaceWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TP_InterfaceWeb\\wwwroot",
+      "Source": "TP_InterfaceWeb",
+      "ContentRoot": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\",
+      "BasePath": "_content/TP_InterfaceWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "SourceId": "TP_InterfaceWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\",
+      "BasePath": "_content/TP_InterfaceWeb",
+      "RelativePath": "lib/bootstrap/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css"
+    }
+  ]
+}
