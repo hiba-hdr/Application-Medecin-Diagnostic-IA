@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "9yajF5gjg9IYeCMiIJEXKNu8y5RoDbiTbHA1UN5BnbI=",
+  "Source": "Ui",
+  "BasePath": "_content/Ui",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Ui\\wwwroot",
+      "Source": "Ui",
+      "ContentRoot": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\",
+      "BasePath": "_content/Ui",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "SourceId": "Ui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\OneDrive\\Bureau\\VisualStudio Folder\\TP_InterfaceWeb\\TP_InterfaceWeb\\wwwroot\\",
+      "BasePath": "_content/Ui",
+      "RelativePath": "lib/bootstrap/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css"
+    }
+  ]
+}
