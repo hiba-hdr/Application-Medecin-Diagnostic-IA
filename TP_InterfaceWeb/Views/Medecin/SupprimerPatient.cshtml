@@ -1,0 +1,39 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Informations du patients";
+    
+}
+
+
+@model TP_InterfaceWeb.Models.AjoutPatient
+
+
+
+<h3>Êtes-vous sûr(e) de vouloir supprimer ce patient ?</h3>
+
+ 
+<body>
+
+    <form method="post" asp-controller="medecin" asp-action="supprimerPatient">
+        <br />
+
+        <div  class="mt-2">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Oui" />
+            
+        </div>
+
+         <div  class="mt-2">
+            <a class="btn btn-danger btn-lg btn-block" href="~/Medecin/PatientAjoute">Non</a>
+            
+        </div>
+        
+        
+    </form>
+
+</body>
+
+
+

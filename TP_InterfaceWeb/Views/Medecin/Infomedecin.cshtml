@@ -1,0 +1,165 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    
+}
+
+@model List<TP_InterfaceWeb.Models.NewAccount>
+
+<h2 class="bg-success">Informations</h2>
+
+
+<br/>
+
+@foreach (TP_InterfaceWeb.Models.NewAccount newAccount in @Model)
+    {
+
+       if (@Model.IndexOf(newAccount) == @Model.Count - 1) 
+       {
+           <div class=input-group>
+       
+
+                <label class="form-label col-sm-2" asp-for="@newAccount.Nom">Nom</label>
+                <div class="col-sm-10">
+                    <label class="form-label" asp-for="@newAccount.Nom">@newAccount.Nom</label>
+                </div>
+        
+           </div>
+
+           <br/>
+
+        <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@newAccount.Prenom">Prénom</label>
+
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.Prenom">@newAccount.Prenom</label>
+        </div>
+      
+       
+   </div>
+   
+   
+   <br/>
+
+    <div class=input-group>
+       
+        <label class="form-label col-sm-2" asp-for="@newAccount.DateNaissance">Date de naissance</label>
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.DateNaissance">@newAccount.DateNaissance</label>
+        </div>
+        
+    </div>
+
+   <br/>
+   <div class = input-group>
+        <label class="form-label col-sm-2" asp-for="@newAccount.Ville">Ville</label>
+        <div class="col-sm-10">
+        <select class="form-select" asp-for="@newAccount.Ville">
+            <option selected disabled value="">@newAccount.Ville</option>
+            
+        </select>
+        </div>
+
+   </div>
+   <br/>
+
+   <div class = input-group>
+       <label class="form-label col-sm-2" asp-for="@newAccount.HommeCheck">Je suis</label>
+        <div class="form-check form-check-inline">
+        
+        <label class="form-check-label" asp-for="@newAccount.HommeCheck">Homme</label>
+        <input class="form-check-input" asp-for="@newAccount.HommeCheck" type="radio" value="@newAccount.HommeCheck" />
+        </div>
+   
+        <div class="form-check form-check-inline">
+        <label class="form-check-label" asp-for="@newAccount.FemmeCheck">Femme</label>
+        <input class="form-check-input" asp-for="@newAccount.FemmeCheck" type="radio" value="@newAccount.FemmeCheck" />
+        </div>
+
+
+   </div>
+
+   
+   <br/>
+   
+
+     <div class=input-group>
+       
+        <label class="form-label col-sm-2" asp-for="@newAccount.DateEntree">Date d'entrée en fonction</label>
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.DateEntree">@newAccount.DateEntree</label>
+        </div>
+        
+    </div>
+
+    <br/>
+
+  <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@newAccount.Mail">Mail</label>
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.Mail">@newAccount.Mail</label>
+        </div>
+        
+  </div>
+
+    <br/>
+   <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@newAccount.UserName">Nom d'utilisateur</label>
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.UserName">@newAccount.UserName</label>
+        </div>
+        
+    </div>
+    <br/>
+
+   <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@newAccount.Password">Mot de passe</label>
+        <div class="col-sm-10">
+            <label class="form-label" asp-for="@newAccount.Password">@newAccount.Password</label>
+        </div>
+        
+    </div>
+
+    <br/>
+
+    <div class="mt-2">
+            <a class="btn btn-success" href="@Url.Action("Modify", "Medecin", new { id = @newAccount.NewAccountID })">Modifier</a>
+    </div>
+    <br />
+    <div class="mt-2">
+            <a class="btn btn-info" asp-controller="Medecin" asp-action="Login">Retour à la page précédente</a>
+    
+    </div>
+
+    <br />
+
+    <div class="mt-2">
+            <a class="btn btn-info" asp-controller="Medecin" asp-action="Login2">Retour à la page d'accueil</a>
+    </div>
+    
+
+    
+
+        
+       }
+    }
+
+
+
+
+
+
+    
+
+   
+
+   

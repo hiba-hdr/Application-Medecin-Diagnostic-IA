@@ -1,0 +1,137 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Modifier";
+    
+}
+
+@model TP_InterfaceWeb.Models.NewAccount
+
+@using (Html.BeginForm("Modify", "Medecin", FormMethod.Post))
+{
+    <h1 class="text-success">Modification des informations</h1>
+    
+
+    <br/>
+       
+    <table>
+            <tr>
+                <td>Id</td>
+                <td>
+                    @Html.DisplayFor(model => model.NewAccountID)
+                    @Html.HiddenFor(model => model.NewAccountID)
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>@Html.TextBoxFor(model => model.Nom)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <td>@Html.TextBoxFor(model => model.Prenom)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+             <tr>
+                <td>Date de naissance</td>
+                <td>@Html.TextBoxFor(m => m.DateNaissance,"{0:yyyy-MM-dd}", new { type = "date" })</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Je suis</td>
+                <td>@Html.RadioButtonFor(model => model.HommeCheck,"Homme") Homme</td>
+                <td>@Html.RadioButtonFor(model => model.FemmeCheck,"Femme") Femme</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Ville</td>
+                <td>@Html.DropDownListFor(model => model.Ville,
+                    
+                  new List<SelectListItem> { 
+                       new SelectListItem { Text = @Model.Ville , Selected = false, Disabled = true},
+                       new SelectListItem { Text = "Montréal" },
+                       new SelectListItem { Text = "Québec City" },
+                       new SelectListItem { Text = "Trois-Rivières" },
+                       new SelectListItem { Text = "Saguenay" },
+                       new SelectListItem { Text = "Lévis" },
+                       new SelectListItem { Text = "Laval" },
+                       new SelectListItem { Text = "Rimouski" },
+                       new SelectListItem { Text = "Gatineau" },
+                       new SelectListItem { Text = "Longueuil" }
+                    },
+                  new { @class="myselect"})
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+             <tr>
+                <td>Date d'entrée en fonction</td>
+                <td>@Html.TextBoxFor(m => m.DateEntree,"{0:yyyy-MM-dd}", new { type = "date" })</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBoxFor(model => model.Mail)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Nom d'utilisateur</td>
+                <td>@Html.TextBoxFor(model => model.UserName)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Mot de passe</td>
+                <td>@Html.PasswordFor(model => model.Password)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+
+             
+           
+           
+            <tr>
+                <td>&nbsp;</td>
+             <tr>
+             <tr>
+                
+                <td>
+                    <input class="btn btn-success" type="submit" value="Enregistrer" />
+                </td>
+            </tr>
+
+
+        </table>
+}
+
+    
+
+       
+    

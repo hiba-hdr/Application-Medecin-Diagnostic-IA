@@ -1,0 +1,52 @@
+﻿@using System.Security.Claims;
+@{
+    var userId = User.FindFirst(ClaimTypes.Name);
+}
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Diagnostic";
+}
+
+
+@model List<TP_InterfaceWeb.Models.AjoutPatient>
+
+@using (Html.BeginForm("Diagnostic", "Medecin", FormMethod.Post))
+{
+
+     <h1 class="text-success">Page de diagnostique</h1>
+
+     <br />
+     <br />
+
+
+ 
+  
+
+    
+   
+      
+         <a href="~/Medecin/AjoutPatient" class="list-group-item active">
+        <h4 class="list-group-item-heading">Cliquez ici pour créer un nouveau patient</h4>
+        </a>
+    <br/>
+
+  
+    @foreach (TP_InterfaceWeb.Models.AjoutPatient newPatient in @Model)
+    {
+       if (@Model.IndexOf(newPatient) == @Model.Count - 1) 
+       {
+        
+        <a href="@Url.Action("PatientAjoute", "Medecin", new { id = @newPatient.AjoutPatientId })" class="list-group-item active">
+         <h4 class="list-group-item-heading">Cliquez ici pour consulter la liste de tous les patients</h4>
+        </a>
+       }
+    }
+
+
+
+
+}   
+
+
+
+

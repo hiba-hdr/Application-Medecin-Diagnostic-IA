@@ -1,0 +1,76 @@
+﻿@using System.Security.Claims;
+@{
+    var userId = User.FindFirst(ClaimTypes.Name);
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Connexion";
+}
+
+@model TP_InterfaceWeb.Models.NewAccount 
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+</head>
+<body>
+
+    
+    @ViewBag.error
+    <form method="post" asp-controller="medecin" asp-action="index">
+       <h1 class="text-success">Connectez-vous !</h1>
+        <br />
+        <br />
+        <table>
+            <tr>
+                <td>Nom d'utilisateur</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input class="form-control" type="text" asp-for="UserName" placeholder="Nom d'utilisateur" name="username" />
+                </td>
+            </tr>
+             <tr>
+                 <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Mot de passe</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="password" asp-for="Password" placeholder="Mot de passe" name="password" />
+                </td>
+            </tr>
+             <tr>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                     <input class="btn btn-success" type="submit" value="Se connecter" />
+                </td>
+            </tr>
+             <tr>
+                <td>&nbsp;</td>
+            </tr>
+           
+             <tr>
+                <td>Vous n'avez pas de compte ?</td>
+            </tr>
+             <tr>
+                <td>
+                   <a class="btn btn-primary" href="~/Medecin/NewAccountView">Créer un nouveau compte</a>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+
+
+</body>
+</html>

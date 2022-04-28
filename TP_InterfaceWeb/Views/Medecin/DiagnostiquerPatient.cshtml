@@ -1,0 +1,86 @@
+﻿using KnnLibrary;
+using System;
+using System.Collections.Generic;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Informations du patients";
+    
+}
+
+
+@model TP_InterfaceWeb.Models.AjoutPatient
+
+@using (Html.BeginForm("DiagnostiquerPatient", "Medecin", FormMethod.Post))
+{
+     <h1 class="text-success">Diagnostic</h1>
+
+      <table>
+            <tr>
+                <td>CP</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input class="form-control" type="number" step="0.01"  name="CP" />
+                </td>
+            </tr>
+             <tr>
+                 <td>&nbsp;</td>
+            </tr>
+
+             <tr>
+                <td>CA</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input class="form-control" type="number" step="0.01"  name="CA" />
+                </td>
+            </tr>
+             <tr>
+                 <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Oldpeak</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input class="form-control" type="number" step="0.01"  name="OldPeak" />
+                </td>
+            </tr>
+             <tr>
+                 <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>thal</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input class="form-control" type="number" step="0.01"  name="Thal" />
+                </td>
+            </tr>
+
+             <tr>
+                 <td>&nbsp;</td>
+            </tr>
+
+             <tr>
+                 <td>
+                     <label>Total Students:</label>  @ViewBag.Sample
+                 </td>
+            </tr>
+            
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                     <input class="btn btn-success" type="submit" value="Diagnostiquer" />
+                </td>
+            </tr>
+
+     </table>
+
+  
+
+}
+

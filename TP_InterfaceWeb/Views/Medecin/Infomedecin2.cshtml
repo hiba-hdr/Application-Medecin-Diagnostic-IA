@@ -1,0 +1,156 @@
+﻿@using System.Security.Claims;
+@{
+    var userId = User.FindFirst(ClaimTypes.Name);
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Informations";
+    
+}
+
+
+@model TP_InterfaceWeb.Models.NewAccount
+
+@using (Html.BeginForm("Infomedecin2", "Medecin", FormMethod.Post))
+{
+
+    <body>
+
+
+
+    <h2 class="bg-success">Informations</h2>
+   
+    <br />
+    
+
+    </body>
+    <br/>
+    @ViewBag.error  
+
+        <div class=input-group>
+            <label class="form-label col-sm-2" asp-for="@Model.Nom">Nom</label>
+            <div class="col-sm-10">
+                <label class="form-label" asp-for="@Model.Nom">@Model.Nom</label>
+            </div>
+        
+        </div>
+
+        <br/>
+
+        <div class=input-group>
+            <label class="form-label col-sm-2" asp-for="@Model.Prenom">Prénom</label>
+
+            <div class="col-sm-10">
+                <label class="form-label" asp-for="@Model.Prenom">@Model.Prenom</label>
+            </div>
+       </div>
+
+        <br/>
+
+        <div class=input-group>
+            <label class="form-label col-sm-2" asp-for="@Model.DateNaissance">Date de naissance</label>
+            <div class="col-sm-10">
+                <label class="form-label" asp-for="@Model.DateNaissance">@Model.DateNaissance</label>
+            </div>
+        </div>
+
+        <br/>
+        <div class = input-group>
+            <label class="form-label col-sm-2" asp-for="@Model.Ville">Ville</label>
+        <div class="col-sm-10">
+        <select class="form-select" asp-for="@Model.Ville">
+            <option selected disabled value="">@Model.Ville</option>
+            
+        </select>
+        </div>
+
+        </div>
+        <br/>
+
+        <div class = input-group>
+            <label class="form-label col-sm-2" asp-for="@Model.HommeCheck">Je suis</label>
+        <div class="form-check form-check-inline">
+        
+            <label class="form-check-label" asp-for="@Model.HommeCheck">Homme</label>
+            <input class="form-check-input" asp-for="@Model.HommeCheck" type="radio" value="@Model.HommeCheck" />
+        </div>
+   
+        <div class="form-check form-check-inline">
+            <label class="form-check-label" asp-for="@Model.FemmeCheck">Femme</label>
+            <input class="form-check-input" asp-for="@Model.FemmeCheck" type="radio" value="@Model.FemmeCheck" />
+        </div>
+
+
+        </div>
+
+   
+        <br/>
+   
+
+        <div class=input-group>
+       
+        <label class="form-label col-sm-2" asp-for="@Model.DateEntree">Date d'entrée en fonction</label>
+        <div class="col-sm-10">
+        <label class="form-label" asp-for="@Model.DateEntree">@Model.DateEntree</label>
+        </div>
+        
+        </div>
+
+        <br/>
+
+        <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@Model.Mail">Mail</label>
+        <div class="col-sm-10">
+        <label class="form-label" asp-for="@Model.Mail">@Model.Mail</label>
+        </div>
+        
+        </div>
+
+        <br/>
+        <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@Model.UserName">Nom d'utilisateur</label>
+        <div class="col-sm-10">
+        <label class="form-label" asp-for="@Model.UserName">@Model.UserName</label>
+        </div>
+        
+        </div>
+        <br/>
+
+        <div class=input-group>
+       
+
+        <label class="form-label col-sm-2" asp-for="@Model.Password">Mot de passe</label>
+        <div class="col-sm-10">
+        <label class="form-label" asp-for="@Model.Password">@Model.Password</label>
+        </div>
+        
+        </div>
+
+        <br/>
+
+        <div class="mt-2">
+        <a class="btn btn-success" href="@Url.Action("Modify", "Medecin", new { id = @Model.NewAccountID })">Modifier</a>
+        </div>
+
+    
+
+        
+        
+
+
+        <div class="mt-2">
+        <a class="btn btn-primary" href="~/Medecin/Login">Retour</a>
+        </div>
+
+
+
+}
+
+    
